@@ -1,18 +1,19 @@
 #include "../includes/ScavTrap.hpp"
+#include "../includes/FragTrap.hpp"
 
 int	main(void)
 {
 	/* Ryu VS Sagat */
-	ClapTrap ryu("Ryu");
+	FragTrap ryu("Ryu");
 	ScavTrap sagat("Sagat");
-
-	ryu.setAd(15);
 	
 	std::cout << std::endl << ryu << std::endl << sagat << std::endl;
 
-	ryu.beRepaired(10);
+	ryu.beRepaired(20);
 
 	sagat.guardGate();
+
+	ryu.highFivesGuys();
 
 	ryu.attack("Sagat");
 	sagat.takeDamage(ryu.getAd());
@@ -24,13 +25,4 @@ int	main(void)
 
 	std::cout << std::endl << ryu << std::endl << sagat << std::endl;
 	/* Ryu VS Sagat End */
-
-	/* ScavTrap copy and equal*/
-	ScavTrap sagat_copy(sagat);
-	std::cout << std::endl << sagat_copy << std::endl;
-
-	sagat_copy.setAd(35);
-
-	ScavTrap sagat_equal = sagat_copy;
-	std::cout << std::endl << sagat_equal << std::endl;
 }
