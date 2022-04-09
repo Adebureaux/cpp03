@@ -24,7 +24,7 @@ class ClapTrap
 	void setEp(unsigned int amount);
 	void setAd(unsigned int amount);
 
-	private:
+	protected:
 	std::string name;
 	int hp;
 	int ep;

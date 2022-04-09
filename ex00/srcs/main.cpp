@@ -7,12 +7,8 @@ int	main(void)
 	ClapTrap sagat("Sagat");
 
 	ryu.setHp(25);
-	ryu.setEp(5);
-	ryu.setAd(3);
-
-	sagat.setHp(17);
-	sagat.setEp(8);
-	sagat.setAd(25);
+	ryu.setEp(3);
+	ryu.setAd(5);
 	
 	std::cout << std::endl << ryu << std::endl;
 	std::cout << sagat << std::endl;
@@ -20,15 +16,17 @@ int	main(void)
 	ryu.attack("Sagat");
 	sagat.takeDamage(ryu.getAd());
 
-	sagat.beRepaired(2);
+	sagat.attack("Ryu");
+	ryu.takeDamage(sagat.getAd());
 
 	ryu.attack("Sagat");
 	sagat.takeDamage(ryu.getAd());
 
-	sagat.attack("Ryu");
-	ryu.takeDamage(sagat.getAd());
-
 	ryu.beRepaired(25);
+
+	sagat.beRepaired(25);
+
+	ryu.attack("Sagat");
 
 	std::cout << std::endl << ryu << std::endl;
 	std::cout << sagat << std::endl;

@@ -2,14 +2,13 @@
 
 ClapTrap::ClapTrap() : name("Anonymous"), hp(10), ep(10), ad(0)
 {
-	std::cout << "Named constructor called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : name(name), hp(10), ep(10), ad(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Named constructor called" << std::endl;
 }
-
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
